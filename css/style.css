@@ -1,0 +1,132 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.cbl-top-nav {
+    font-family: "Work Sans";
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    z-index: 6000;
+    border-bottom: solid 1px #ddd;
+}
+
+.cbl-top-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+    padding-left: 65px;
+    height: 100%;
+}
+
+.cbl-right-wrapper {
+    display: flex;
+    margin-left: auto;
+}
+
+.cbl-search-wrapper {
+    display: inline-flex;
+    height: 100%;
+}
+
+.cbl-search-wrapper i {
+    margin: auto 0;
+    font-size: 24px;
+}
+
+.cbl-company-input-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.cbl-company-input-wrapper select {
+    height: 100%;
+}
+
+.cbl-top-icon-list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    font-size: 0;
+}
+
+.cbl-top-icon-list > li {
+    display: inline-block;
+    position: relative;
+    margin: auto 5px;
+}
+
+.cbl-top-icon-list > li > button {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50px;
+    border: none;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: #454545;
+}
+
+.cbl-icon-badge {
+    font-family: "Work Sans";
+    font-size: 11px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /*margin-top: -5px;*/
+    margin-left: -20px;
+    z-index: 1;
+    background-color: #131313;
+    padding: 0 5px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.cbl-user-button {
+    font-family: "Work Sans";
+    display: inline-flex;
+    flex-direction: row;
+    text-align: right;
+    height: 100%;
+    padding: 0;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cbl-user-button .cbl-user-info {
+    display: inline-flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.cbl-user-button .cbl-user-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.cbl-menu-nav {
+    font-family: "Work Sans";
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 100%;
+    background-color: #00A692;
+    z-index: 7000;
+    border-right: solid 1px #ddd;
+}
