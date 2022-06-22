@@ -2,6 +2,23 @@ body {
     background-color: #f1f1f1;
 }
 
+.cbl-bg-secondary {
+    background-color: #6C63FF !important;
+}
+
+.cbl-bg-danger {
+    background-color: #FF2569 !important;
+}
+
+.cbl-caption {
+    color: #666;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+
+
 .cbl-top-nav {
     font-family: "Work Sans";
     font-size: 14px;
@@ -19,7 +36,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: auto 0;
-    padding-left: 65px;
+    padding: 0 20px 0 85px;
     height: 100%;
 }
 
@@ -31,21 +48,64 @@ body {
 .cbl-search-wrapper {
     display: inline-flex;
     height: 100%;
+    border: none;
+    position: relative;
+    min-width: 300px;
 }
 
 .cbl-search-wrapper i {
     margin: auto 0;
     font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: #666;
+}
+
+.cbl-search-wrapper .cbl-search-input {
+    font-family: 'Work Sans';
+    border: none;
+    outline: none;
+    padding-left: 32px;
+    width: 100%;
 }
 
 .cbl-company-input-wrapper {
+    position: relative;
     display: inline-flex;
     flex-direction: column;
     margin-right: 20px;
+    min-width: 250px;
+}
+
+.cbl-company-input-wrapper:hover {
+    background-color: #f1f1f1;
+}
+
+.cbl-company-input-wrapper label {
+    font-size: 12px;
+    color: #666;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .cbl-company-input-wrapper select {
+    font-family: 'Work Sans';
+    width: 100%;
     height: 100%;
+    border: none;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+    outline: none;
+    padding: 10px 10px 0 5px;
+    box-sizing: border-box;
+    transition: all ease .25s;
+}
+
+.cbl-company-input-wrapper select:hover {
+    background-color: #f1f1f1;
 }
 
 .cbl-top-icon-list {
@@ -59,7 +119,7 @@ body {
 .cbl-top-icon-list > li {
     display: inline-block;
     position: relative;
-    margin: auto 5px;
+    margin: auto 4px;
 }
 
 .cbl-top-icon-list > li > button {
@@ -73,6 +133,12 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: #454545;
+    background-color: #fff;
+    transition: all ease .25s;
+}
+
+.cbl-top-icon-list > li > button:hover {
+    background-color: #f1f1f1;
 }
 
 .cbl-icon-badge {
@@ -89,6 +155,7 @@ body {
     padding: 0 5px;
     border-radius: 30px;
     color: #fff;
+    border: solid 2px #fff;
 }
 
 .cbl-user-button {
@@ -98,7 +165,7 @@ body {
     text-align: right;
     height: 100%;
     padding: 0;
-    margin-left: 20px;
+    margin-left: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -115,7 +182,7 @@ body {
     height: 46px;
     border-radius: 50px;
     overflow: hidden;
-    margin-left: 10px;
+    margin: auto 0 auto 10px;
 }
 
 .cbl-menu-nav {
