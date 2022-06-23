@@ -1,8 +1,11 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="css/style.css" />
+
     <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,22 +35,111 @@
                 </div>
 
                 <ul class="cbl-top-icon-list">
-                    <li><button title="Herramientas"><i class="la la-wrench"></i></button></li>
-                    <li><button title="Notificaciones"><i class="la la-bell"></i></button><span class="cbl-icon-badge cbl-bg-danger">10</span></li>
-                    <li><button title="Plan de referidos"><i class="la la-comments-dollar"></i></button><span class="cbl-icon-badge cbl-bg-secondary">¡Ganá!</span>
+                    <li class="dropdown">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            title="Herramientas"><i class="la la-wrench"></i></button>
+
+                        <div class="cbl-dropdown dropdown-menu" onclick="event.stopPropagation()"
+                            aria-labelledby="dLabel">
+
+                            <div class="dropdown-menu-wrapper" data-ref="main">
+                                <h6>Herramientas</h6>
+                                <ul class="dropdown-list">
+                                    <li><a href="#">Explorador de archivos</a></li>
+                                    <li><a data-link="submenu1">Importación masiva</a></li>
+                                    <li><a href="#">Tracking de horas</a></li>
+                                    <li><a href="#">Configurar alertas</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown-menu-wrapper hide-rt" data-ref="submenu1">
+                                <ul class="dropdown-list">
+                                    <li><a data-link="main" data-action="back">Volver</a></li>
+                                    <li><a>Clientes</a></li>
+                                    <li><a>Proveedores</a></li>
+                                    <li><a>Productos</a></li>
+                                    <li><a>Combos</a></li>
+                                    <li><a>Servicios</a></li>
+                                    <li><a>Facturas de venta simple</a></li>
+                                    <li><a>Facturas de venta con items</a></li>
+                                    <li><a>Facturas de compras</a></li>
+                                    <li><a>Plan de cuentas</a></li>
+                                    <li><a>Movimientos bancarios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            title="Notificaciones"><i class="la la-bell"></i></button><span
+                            class="cbl-icon-badge cbl-bg-danger">10</span>
+                        <div class="cbl-dropdown dropdown-menu" style="width: 350px">
+                            <div class="dropdown-menu-wrapper" data-ref="main" style="width: 100%; min-width: 100%">
+                                <h6>Notificaciones (0)</h6>
+                                <ul class="dropdown-list-notifications">
+                                    <li>
+                                        <a href="#">
+                                            <span class="title">Comprobante Emitido</span>
+                                            <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="title">Comprobante Emitido</span>
+                                            <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="title">Comprobante Emitido</span>
+                                            <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="title">Comprobante Emitido</span>
+                                            <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li><button title="Plan de referidos"><i class="la la-comments-dollar"></i></button><span
+                            class="cbl-icon-badge cbl-bg-secondary" style="margin-left: -25px;">¡Ganá!</span>
                     </li>
                 </ul>
-
-                <button title="Mi cuenta" class="cbl-user-button">
-                    <div class="cbl-user-info">
-                        <span>¡Hola, <b>Pedro</b>!</span>
-                        <span class="cbl-caption">Plan Pro - #807</span>
+                <div class="dropdown">
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        title="Mi cuenta" class="cbl-user-button">
+                        <div class="cbl-user-info">
+                            <span>¡Hola, <b>Pedro</b>!</span>
+                            <span class="cbl-caption">Plan Pro - #807</span>
+                        </div>
+                        <div class="cbl-user-avatar">
+                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                                alt="Mi Cuenta" width="100%" />
+                        </div>
+                    </button>
+                    <div class="dropdown-menu cbl-dropdown" onclick="event.stopPropagation()">
+                        <div class="dropdown-menu-wrapper" data-ref="main" style="width: 100%; min-width: 100%">
+                            <ul class="cbl-user-detail">
+                                <li><b class="cbl-user-name">Pedro Luis Gonzalez</b></li>
+                                <li class="cbl-user-document">CUIT 20345687898</li>
+                                <li class="cbl-user-client-info">Nro Cliente: 807 - PLAN PRO</li>
+                                <li class="cbl-user-email">pedro.luis.gz@gmail.com</li>
+                            </ul>
+                            <ul class="dropdown-list dropdown-list-primary-color">
+                                <li><a href="#">Datos de mi empresa</a></li>
+                                <li><a href="#">Cambiar contraseña</a></li>
+                                <li><a href="#">Administrar usuarios</a></li>
+                                <li><a href="#">Pagar mi plan</a></li>
+                                <li><a href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="cbl-user-avatar">
-                        <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
-                            alt="Mi Cuenta" width="100%" />
-                    </div>
-                </button>
+                </div>
             </div>
         </div>
     </header>
@@ -57,5 +149,43 @@
 
     </div>
 </body>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    /*$(window).click(function() {
+        $(this).find(".dd-menu").hide();
+        alert("hello");
+    });*/
+
+    /*$(".dropdown-inside").children("a.dropdown-parent").click(function () {
+        var ddinsideRef = $(this).parent(".dropdown-inside").parent(".dropdown-list");
+        var dropdownCurrentli = $(this).parent(".dropdown-inside");
+        var mainDropdown = $(this).parent(".dropdown-inside").parent(".dropdown-list").parent(".dropdown-menu-level").parent(".cbl-dropdown");
+        $(dropdownCurrentli).children(".dropdown-menu-sublevel").addClass("cbl-open");
+        var newHeight = $(dropdownCurrentli).children(".dropdown-menu-sublevel").height();
+        $(mainDropdown).height(newHeight);
+    });*/
+
+    $("[data-link]").click(function () {
+        var dropdown = $(this).closest('.dropdown-menu');
+        var ref = $(this).data("link");
+        //$(dropdown).find("[data-ref=" + ref + "]").show();
+        //$(this).closest(".dropdown-menu-wrapper").hide();
+        if ($(this).data("action") === "back") {
+            $(dropdown).find("[data-ref=" + ref + "]").addClass("current").removeClass("hide-lt hide-rt");
+            $(this).closest(".dropdown-menu-wrapper").addClass("hide-rt").removeClass("current");
+        } else {
+            $(dropdown).find("[data-ref=" + ref + "]").addClass("current").removeClass("hide-lt hide-rt");
+            $(this).closest(".dropdown-menu-wrapper").addClass("hide-lt").removeClass("current");
+        }
+    })
+
+</script>
 
 </html>

@@ -14,7 +14,7 @@ body {
     color: #666;
     font-size: 12px;
     display: inline-block;
-    margin-top: 3px;
+    margin-top: 0px;
 }
 
 
@@ -89,6 +89,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+    font-weight: 400;
 }
 
 .cbl-company-input-wrapper select {
@@ -137,6 +138,7 @@ body {
     transition: all ease .25s;
 }
 
+.cbl-top-icon-list > li.open > button,
 .cbl-top-icon-list > li > button:hover {
     background-color: #f1f1f1;
 }
@@ -180,6 +182,8 @@ body {
 .cbl-user-button .cbl-user-avatar {
     width: 46px;
     height: 46px;
+    min-width: 46px;
+    min-height: 46px;
     border-radius: 50px;
     overflow: hidden;
     margin: auto 0 auto 10px;
@@ -197,3 +201,209 @@ body {
     z-index: 7000;
     border-right: solid 1px #ddd;
 }
+
+.cbl-dropdown {
+    padding: 0px;
+    width: 230px;
+    overflow: hidden;
+    transition: all ease .4s;
+    border-radius: 10px 0 10px 10px;
+    left: inherit;
+    right: 0;
+    border: solid 1px #C6C6C6;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, .10) ;
+    /*min-height: 300px;*/
+}
+
+/*.open>.cbl-dropdown {
+    display: flex;
+    flex-direction: row;
+}*/
+
+.cbl-dropdown .dropdown-menu-wrapper {
+    width: 230px;
+    min-width: 230px;
+    padding: 15px;
+    transition: all ease .4s;
+}
+
+.cbl-dropdown h6 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 0;
+    font-size: 13px;
+}
+
+
+.cbl-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cbl-dropdown ul > li {
+    margin: 4px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.cbl-dropdown ul > li > a {
+    display: block;
+    color: #131313;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+}
+
+.cbl-dropdown ul > li > a:hover {
+    color: #00A692;
+}
+
+.cbl-dropdown ul > li > a[data-link]:after {
+    content: '';
+    /*content: "\e080";
+    font-family: 'Glyphicons Halflings';*/
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -4px;
+    font-size: 12px;
+    color: #777;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    /*background-color: #666;*/
+    border-bottom: solid 2px #8f8f8f;
+    border-right: solid 2px #8f8f8f;
+}
+
+.cbl-dropdown ul > li > a[data-action="back"] {
+    padding-left: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.cbl-dropdown ul > li > a[data-action="back"]:after {
+    content: '';
+    /*content: "\e080";
+    font-family: 'Glyphicons Halflings';*/
+    position: absolute;
+    top: 50%;
+    right: inherit;
+    left: 0px;
+    margin-top: -4px;
+    font-size: 12px;
+    color: #777;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-225deg);
+    /*background-color: #666;*/
+    border-bottom: solid 2px #8f8f8f;
+    border-right: solid 2px #8f8f8f;
+}
+
+.cbl-dropdown .hide-rt,
+.cbl-dropdown .hide-lt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.cbl-dropdown .hide-rt {
+    transform: translateX(230px);
+}
+
+.cbl-dropdown .hide-lt {
+    transform: translateX(-230px);
+}
+
+.cbl-dropdown .current {
+    transform: translateX(0px);
+}
+
+.cbl-dropdown .dropdown-list-notifications {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.cbl-dropdown .dropdown-list-notifications li {
+    padding: 8px 5px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.cbl-dropdown .dropdown-list-notifications li:hover {
+    background-color: #f1f1f1;
+}
+
+.cbl-dropdown .dropdown-list-notifications .title {
+    display: inline-block;
+    width: 100%;
+    color: #131313;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cbl-dropdown .dropdown-list-notifications .caption {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cbl-dropdown ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.cbl-dropdown ::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+.cbl-dropdown ::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.cbl-dropdown ::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.cbl-dropdown .cbl-user-detail {
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cbl-dropdown .cbl-user-detail li {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+.cbl-dropdown .cbl-user-detail .cbl-user-name {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cbl-dropdown .dropdown-list-primary-color a {
+    color: #00A692;
+}
+
+.cbl-dropdown .dropdown-list-primary-color a:hover {
+    color: #007868;
+}
+
+
+
+
+
