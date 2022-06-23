@@ -80,16 +80,17 @@ body {
 }
 
 .cbl-company-input-wrapper:hover {
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
 }
 
 .cbl-company-input-wrapper label {
     font-size: 12px;
     color: #666;
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 10px;
     font-weight: 400;
+    z-index: 1;
 }
 
 .cbl-company-input-wrapper select {
@@ -105,8 +106,41 @@ body {
     transition: all ease .25s;
 }
 
-.cbl-company-input-wrapper select:hover {
+.cbl-company-input-wrapper .select2-selection {
+    border: none;
+    background: transparent;
+    height: 59px;
+    padding: 0;
+}
+
+.cbl-company-input-wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #131313;
+    line-height: 49px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+}
+
+.select2-search__field {
+    outline: none !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: transparent;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: #f1f1f1;
+    color: #00A692;
+}
+
+.select2-results__options {
+    color: #131313;
+    font-size: 13px;
+}
+
+.cbl-company-input-wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 59px;
 }
 
 .cbl-top-icon-list {
@@ -430,16 +464,19 @@ body {
 
 /* Scrollbar */
 /* Width */
+.select2-results__options::-webkit-scrollbar,
 .ui-autocomplete::-webkit-scrollbar {
     width: 5px;
 }
 
 /* Track */
+.select2-results__options::-webkit-scrollbar-track,
 .ui-autocomplete::-webkit-scrollbar-track {
     background: transparent;
 }
 
 /* Handle */
+.select2-results__options::-webkit-scrollbar-thumb,
 .ui-autocomplete::-webkit-scrollbar-thumb {
     background: #ddd;
     border-radius: 10px;
@@ -447,6 +484,11 @@ body {
 }
 
 /* Handle on hover */
+.select2-results__options::-webkit-scrollbar-thumb:hover,
 .ui-autocomplete::-webkit-scrollbar-thumb:hover {
     background: #666;
+}
+
+.select2-container--open {
+    z-index: 8000;
 }

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/line-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/select2.css" />
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -28,10 +29,25 @@
             <div class="cbl-right-wrapper">
                 <div class="cbl-company-input-wrapper">
                     <label>Empresa actual:</label>
-                    <select class="">
-                        <option>Empresa</option>
-                        <option>Empresa</option>
-                        <option>Empresa</option>
+                    <select class="js-example-basic-single" name="state">
+                        <option value="DEMO SRL">DEMO SRL</option>
+                        <option value="Empresa Test">Empresa Test</option>
+                        <option value="Empresa Test">Tienda Online SRL</option>
+                        <option value="Empresa Test">Empresa test II</option>
+                        <option value="Empresa Test">Mi empresa</option>
+                        <option value="Empresa Test">Otra empresa</option>
+                        <option value="DEMO SRL">DEMO SRL</option>
+                        <option value="Empresa Test">Empresa Test</option>
+                        <option value="Empresa Test">Tienda Online SRL</option>
+                        <option value="Empresa Test">Empresa test II</option>
+                        <option value="Empresa Test">Mi empresa</option>
+                        <option value="Empresa Test">Otra empresa</option>
+                        <option value="DEMO SRL">DEMO SRL</option>
+                        <option value="Empresa Test">Empresa Test</option>
+                        <option value="Empresa Test">Tienda Online SRL</option>
+                        <option value="Empresa Test">Empresa test II</option>
+                        <option value="Empresa Test">Mi empresa</option>
+                        <option value="Empresa Test">Otra empresa</option>
                     </select>
                 </div>
 
@@ -157,8 +173,14 @@
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/select2.min.js"></script>
 
 <script>
+
+    // Select2 Initialization
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2();
+    });
     /*$(window).click(function() {
         $(this).find(".dd-menu").hide();
         alert("hello");
