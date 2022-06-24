@@ -1,7 +1,7 @@
 <html lang="es">
 
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/line-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -19,7 +19,16 @@
 
 <body>
     <header class="cbl-top-nav">
+        <a href="#" class="cbl-logo">
+            <img src="img/logo.svg" alt="Contabilium" width="100%" />
+        </a>
         <div class="cbl-top-nav-wrapper">
+
+            <ul class="cbl-mobile-buttons">
+                <li>
+                    <button class="button-sidebar-toggle"><i class="la la-bars"></i></button>
+                </li>
+            </ul>
 
             <div class="cbl-search-wrapper">
                 <i class="la la-search"></i>
@@ -157,12 +166,68 @@
                         </div>
                     </div>
                 </div>
+                <ul class="cbl-mobile-buttons">
+                    <li>
+                        <button class="button-usermenu-toggle"><i class="la la-user-circle"></i></button>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
-
-
     <div class="cbl-menu-nav">
+
+    </div>
+
+    <div class="cbl-usermenu-mobile">
+        <div class="cbl-usermenu-wrapper">
+            <div class="cbl-user-avatar">
+                <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="Mi Cuenta"
+                    width="100%">
+            </div>
+            <div class="cbl-user-info">
+                <h6 class="cbl-user-name">Pedro Luis Gonzalez</h6>
+                <span class="caption">CUIT 20345687898</span>
+                <span class="caption">Nro Cliente: 807 - PLAN PRO</span>
+            </div>
+            <div class="cbl-company-input-wrapper-mobile">
+                <label>Empresa actual:</label>
+                <select class="js-example-basic-single" name="state">
+                    <option value="DEMO SRL">DEMO SRL</option>
+                    <option value="Empresa Test">Empresa Test</option>
+                    <option value="Empresa Test">Tienda Online SRL</option>
+                    <option value="Empresa Test">Empresa test II</option>
+                    <option value="Empresa Test">Mi empresa</option>
+                    <option value="Empresa Test">Otra empresa</option>
+                    <option value="DEMO SRL">DEMO SRL</option>
+                    <option value="Empresa Test">Empresa Test</option>
+                    <option value="Empresa Test">Tienda Online SRL</option>
+                    <option value="Empresa Test">Empresa test II</option>
+                    <option value="Empresa Test">Mi empresa</option>
+                    <option value="Empresa Test">Otra empresa</option>
+                    <option value="DEMO SRL">DEMO SRL</option>
+                    <option value="Empresa Test">Empresa Test</option>
+                    <option value="Empresa Test">Tienda Online SRL</option>
+                    <option value="Empresa Test">Empresa test II</option>
+                    <option value="Empresa Test">Mi empresa</option>
+                    <option value="Empresa Test">Otra empresa</option>
+                </select>
+            </div>
+            <ul class="cbl-usermenu-list">
+                <li><a href="#"><i class="la la-cog"></i> Datos de mi empresa</a></li>
+                <li><a href="#"><i class="la la-lock"></i> Cambiar contraseña</a></li>
+                <li><a href="#"><i class="la la-users"></i> Administrar usuarios</a></li>
+                <li><a href="#"><i class="la la-comment-dollar"></i> Pagar mi plan</a></li>
+                <li><a href="#"><i class="la la-sign-out"></i> Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="cbl-content-wrapper">
+
+
+
 
     </div>
 </body>
@@ -208,6 +273,19 @@
             $(this).closest(".dropdown-menu-wrapper").addClass("hide-lt").removeClass("current");
         }
     })
+
+    $(".button-sidebar-toggle").click(function () {
+        $("body").toggleClass("sidebar-open").removeClass("usermenu-open");
+        $(this).children("i").toggleClass("la-bars la-times");
+        e.stopPropagation()
+    })
+
+    $(".button-usermenu-toggle").click(function () {
+        $("body").toggleClass("usermenu-open").removeClass("sidebar-open");
+        $(this).children("i").toggleClass("la-user-circle la-times");
+        e.stopPropagation()
+    })
+
 </script>
 
 <script>
