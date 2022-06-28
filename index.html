@@ -65,7 +65,7 @@
                         <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                             title="Herramientas"><i class="la la-wrench"></i></button>
 
-                        <div class="cbl-dropdown dropdown-menu" onclick="event.stopPropagation()"
+                        <div class="cbl-dropdown dropdown-menu content-menu" onclick="event.stopPropagation()"
                             aria-labelledby="dLabel">
 
                             <div class="dropdown-menu-wrapper" data-ref="main">
@@ -176,223 +176,461 @@
     </header>
     <div class="cbl-menu-nav">
         <div class="cbl-sidebar-wrapper">
-            <div class="cbl-sidebar-top-content">
-                <button class="cbl-logo-button-toggle">
-                    <div class="cbl-isologo-wrapper">
-                        <img src="img/logo_sidebar.svg" width="" alt="Contabilium">
-                    </div>
-                </button>
-                <ul class="cbl-sidebar-list">
-                    <li>
-                        <button data-toggle="tooltip" data-placement="right" title="DASHBOARD">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-dashboard"></i> <span class="cbl-menu-label">Dashboard</span>
-                            </div>
-                        </button>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-receipt"></i> <span class="cbl-menu-label">Ventas</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu">
-                            <h6>Ventas</h6>
-                            <ul>
-                                <li><a href="#">Ventas por POS</a></li>
-                                <li><a href="#">Facturación</a></li>
-                                <li><a href="#">Integraciones (Ventas Online)</a></li>
-                                <li><a href="#">Cobranzas</a></li>
-                                <li><a href="#">Presupuestos</a></li>
-                                <li><a href="#">Abonos</a></li>
-                                <li><a href="#">Productos y Servicios</a></li>
-                                <li><a href="#">Clientes</a></li>
-                                <li><a href="#">Ordenes de venta</a></li>
-                                <li><a href="#">Remitos personalizados</a></li>
-                            </ul>
+            <div class="cbl-menu-wrapper-desktop">
+                <div class="cbl-sidebar-top-content">
+                    <button class="cbl-logo-button-toggle">
+                        <div class="cbl-isologo-wrapper">
+                            <img src="img/logo_sidebar.svg" width="" alt="Contabilium">
                         </div>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-tag"></i> <span class="cbl-menu-label">Compras</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu">
-                            <h6>Compras</h6>
-                            <ul>
-                                <li><a href="#">Ordenes de compra</a></li>
-                                <li><a href="#">Comprobantes</a></li>
-                                <li><a href="#">Pagos</a></li>
-                                <li><a href="#">Proveedores</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-university"></i> <span class="cbl-menu-label">Tesorería</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu">
-                            <h6>Tesorería</h6>
-                            <ul>
-                                <li><a href="#">Entidades</a></li>
-                                <li><a href="#">Cajas</a></li>
-                                <li><a href="#">Cheques</a></li>
-                                <li><a href="#">Movimientos bancarios</a></li>
-                                <li><a href="#">Movimientos de fondos</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-box"></i> <span class="cbl-menu-label">Inventarios</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu">
-                            <h6>Inventarios</h6>
-                            <ul>
-                                <li><a href="#">Depósitos</a></li>
-                                <li><a href="#">Modificación de stock</a></li>
-                                <li><a href="#">Movimientos entre depósitos</a></li>
-                                <li><a href="#">Importación masiva de productos</a></li>
-                                <li><a href="#">Actualización masiva de stock</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-book-open"></i> <span class="cbl-menu-label">Contabilidad</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu">
-                            <h6>Contabilidad</h6>
-                            <ul>
-                                <li><a href="#">Plan de cuentas</a></li>
-                                <li><a href="#">Libro diario</a></li>
-                                <li><a href="#">Libro diario copiativo</a></li>
-                                <li><a href="#">Libro mayor</a></li>
-                                <li><a href="#">Balance general</a></li>
-                                <li><a href="#">Asientos manuales</a></li>
-                                <li><a href="#">Estado de resultado</a></li>
-                                <li><a href="#">Modificar cuentas masivamente</a></li>
-                                <li><a href="#">Reprocesar asientos</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button data-toggle="dropdown">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-chart-bar"></i> <span class="cbl-menu-label">Reportes</span>
-                            </div>
-                        </button>
-                        <div class="cbl-sidebar-dropdown dropdown-menu"
-                            style="min-width: 1024px; top: inherit; bottom: 100%; margin-bottom: -236px;">
-                            <h6>Reportes</h6>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="cbl-dropdown-subcategory">Financieros y Económicos</h6>
-                                    <ul>
-                                        <li><a href="#">Comparativo</a></li>
-                                        <li><a href="#">Egresos por CC</a></li>
-                                        <li><a href="#">Egresos mensuales por CC</a></li>
-                                        <li><a href="#">Ingresos vs Egresos por CC</a></li>
-                                        <li><a href="#">Liquidez anual</a></li>
-                                        <li><a href="#">Saldos de liquidez</a></li>
-                                    </ul>
+                    </button>
+
+                    <ul class="cbl-sidebar-list">
+                        <li>
+                            <button data-toggle="tooltip" data-placement="right" title="DASHBOARD">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-dashboard"></i> <span class="cbl-menu-label">Dashboard</span>
                                 </div>
-                                <div class="col-sm-3">
-                                    <h6 class="cbl-dropdown-subcategory">Impositivos</h6>
-                                    <ul>
-                                        <li><a href="#">IVA Ventas</a></li>
-                                        <li><a href="#">IVA Compras</a></li>
-                                        <li><a href="#">Posición IVA</a></li>
-                                        <li><a href="#">Retenciones</a></li>
-                                        <li><a href="#">Percepciones</a></li>
-                                        <li><a href="#">Libro IVA Digital / CITI</a></li>
-                                        <li><a href="#">Agentes de recaudación</a></li>
-                                        <li><a href="#">CM - Sifere Web</a></li>
-                                        <li><a href="#">Ventas por destino</a></li>
-                                        <li><a href="#">Compras por destino</a></li>
-                                    </ul>
+                            </button>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown" data-link="ventas">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-receipt"></i> <span class="cbl-menu-label">Ventas</span>
                                 </div>
-                                <div class="col-sm-3">
-                                    <h6 class="cbl-dropdown-subcategory">Productos</h6>
-                                    <ul>
-                                        <li><a href="#">Stock</a></li>
-                                        <li><a href="#">Stock mínimo</a></li>
-                                        <li><a href="#">Rentabilidad de productos</a></li>
-                                        <li><a href="#">Rentabilidad por venta</a></li>
-                                        <li><a href="#">Entradas y salidas</a></li>
-                                        <li><a href="#">Detalle de reservas</a></li>
-                                        <li><a href="#">Ranking</a></li>
-                                        <li><a href="#">Historial de compras</a></li>
-                                        <li><a href="#">Ventas por cliente</a></li>
-                                        <li><a href="#">Stock de despacho</a></li>
-                                    </ul>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                                <h6>Ventas</h6>
+                                <ul>
+                                    <li><a href="https://pos.contabilium.com" id="liVentasPOS" data-formulario="comprobantes" target="_blank"><span>Ventas por POS</span></a></li>
+                                    <li><a href="/comprobantes.aspx" id="liVentasComprobantes" data-formulario="comprobantes"><span>Facturación</span></a></li>
+                                    <li><a href="/modulos/ventas/integraciones.aspx" id="liMercadoLibreA" data-formulario="integraciones"><span>Integraciones (Ventas Online)</span></a></li>
+                                    <li><a href="/cobranzas.aspx" id="liVentasCobranzas" data-formulario="cobranzas"><span>Cobranzas</span></a></li>
+                                    <li><a href="/presupuestos.aspx" id="liVentasPresupuestos" data-formulario="presupuestos"><span>Presupuestos</span></a></li>
+                                    <li><a href="/Abonos.aspx" id="liVentasAbonos" data-formulario="Abonos"><span>Abonos</span></a></li>
+                                    <li><a href="/conceptos.aspx" id="liVentasProductosyServicios" data-formulario="conceptos"><span>Productos y servicios</span></a></li>
+                                    <li><a href="/personas.aspx?tipo=c" id="liVentasClientes" data-formulario="personas"><span>Clientes</span></a></li>
+                                    <li><a href="/modulos/ventas/ordenesVenta.aspx" id="liVentaOrdenes" data-formulario="ordenesVenta"><span>Ordenes de venta</span></a></li>
+                                    <li><a href="/modulos/ventas/remitos.aspx#/remitos" id="liVentaRemitos" data-formulario="remitos"><span>Remitos personalizados</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-tag"></i> <span class="cbl-menu-label">Compras</span>
                                 </div>
-                                <div class="col-sm-3">
-                                    <h6 class="cbl-dropdown-subcategory">Gestión</h6>
-                                    <ul>
-                                        <li><a href="#">Cuenta Corriente</a></li>
-                                        <li><a href="#">Saldos de clientes</a></li>
-                                        <li><a href="#">Cobranzas pendientes</a></li>
-                                        <li><a href="#">Saldos de proveedores</a></li>
-                                        <li><a href="#">Cuentas a pagar</a></li>
-                                        <li><a href="#">Pagos a proveedores</a></li>
-                                        <li><a href="#">Ranking de clientes</a></li>
-                                        <li><a href="#">Ventas por integración</a></li>
-                                        <li><a href="#">Ventas por punto de venta</a></li>
-                                        <li><a href="#">Ventas por condición de venta</a></li>
-                                        <li><a href="#">Compras por cliente</a></li>
-                                        <li><a href="#">Tracking horas</a></li>
-                                        <li><a href="#">Comisiones por vendedor</a></li>
-                                        <li><a href="#">Ventas mensuales</a></li>
-                                    </ul>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                                <h6>Compras</h6>
+                                <ul>
+                                    <li><a href="/modulos/compras/ordenesCompras.aspx?tipo=p" id="liComprasOrdenes" data-formulario="ordenesCompras"><span>Ordenes de compra</span></a></li>
+                                    <li><a href="/modulos/compras/compras.aspx" id="liComprasComprobantes" data-formulario="compras"><span>Comprobantes</span></a></li>
+                                    <li><a href="/modulos/compras/pagos.aspx" id="liComprasPagos" data-formulario="pagos"><span>Pagos</span></a></li>
+                                    <li><a href="/personas.aspx?tipo=p" id="liComprasProveedores" data-formulario="personas"><span>Proveedores</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-university"></i> <span class="cbl-menu-label">Tesorería</span>
+                                </div>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                                <h6>Tesorería</h6>
+                                <ul>
+                                    <li><a href="/modulos/tesoreria/bancos.aspx" id="liTesoreriaBancos" data-formulario="bancos"><span>Entidades</span></a></li>
+                                    <li><a href="/modulos/tesoreria/caja.aspx" id="liTesoreriaCaja" data-formulario="caja"><span>Cajas</span></a></li>
+                                    <li><a href="/modulos/tesoreria/cheques.aspx" id="liTesoreriaCheques" data-formulario="cheques"><span>Cheques</span></a></li>
+                                    <li><a href="/modulos/reportes/DetalleBancario.aspx" id="liTesoreriaDetalleBancario" data-formulario="DetalleBancario">Movimientos bancarios</a></li>
+                                    <li><a href="/modulos/tesoreria/MovimientoDeFondos.aspx" id="liTesoreriaMovimientosFondos" data-formulario="MovimientoDeFondos"><span>Movimiento de fondos</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-box"></i> <span class="cbl-menu-label">Inventarios</span>
+                                </div>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                                <h6>Inventarios</h6>
+                                <ul>
+                                    <li><a href="/modulos/inventarios/inventarios.aspx" id="liDepositos" data-formulario="inventarios"><span>Depósitos</span></a></li>
+                                    <li><a href="/modulos/inventarios/modificacionStock.aspx" id="liModificacionStock" data-formulario="modificacionStock"><span>Modificación de stock</span></a></li>
+                                    <li><a href="/modulos/inventarios/movimientosDeStock.aspx" id="liMovimientosDepositos" data-formulario="movimientosDeStock"><span>Movimientos entre depósitos</span></a></li>
+                                    <li><a href="/importar.aspx?tipo=Productos" id="liImportacionMasivaProductos" data-formulario="importar"><span>Importación masiva de productos</span></a></li>
+                                    <li><a href="/importar.aspx?tipo=Stock" id="liActualizacionMasivaStock" data-formulario="importar"><span>Actualización masiva de stock</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-book-open"></i> <span class="cbl-menu-label">Contabilidad</span>
+                                </div>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                                <h6>Contabilidad</h6>
+                                <ul>
+                                    <li><a href="/modulos/contabilidad/plandecuentas.aspx" id="liContabilidadPlanDeCuentas" data-formulario="plandecuentas"><span>Plan de cuentas</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroDiario.aspx" id="liContabilidadLibroDiario" data-formulario="LibroDiario"><span>Libro diario</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroDiarioCopiativo.aspx" id="liContabilidadLibroDiarioCopiativo" data-formulario="LibroDiarioCopiativo"><span>Libro diario copiativo</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroMayor.aspx" id="liContabilidadLibroMayor" data-formulario="LibroMayor"><span>Libro mayor</span></a></li>
+                                    <li><a href="/modulos/reportes/BalanceGeneral.aspx" id="liContabilidadBalanceGeneral" data-formulario="BalanceGeneral"><span>Balance general</span></a></li>
+                                    <li><a href="/modulos/contabilidad/asientosManuales.aspx" id="liContabilidadAsientosManuales" data-formulario="asientosManuales"><span>Asientos manuales</span></a></li>
+                                    <li><a href="/modulos/reportes/EstadoResultado.aspx" id="liContabilidadEstadoResultado" data-formulario="EstadoResultado"><span>Estado de resultado</span></a></li>
+                                    <li><a href="/modulos/contabilidad/modificarCuentas.aspx" id="liContabilidadModificarCuentas" data-formulario="modificarCuentas"><span>Modificar cuentas masivamente</span></a></li>
+                                    <li><a href="/modulos/contabilidad/asientosPendientes.aspx" id="liContabilidadAsientosPendientes" data-formulario="asientosPendientes"><span>Reprocesar asientos</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button data-toggle="dropdown">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-chart-bar"></i> <span class="cbl-menu-label">Reportes</span>
+                                </div>
+                            </button>
+                            <div class="cbl-sidebar-dropdown dropdown-menu"
+                                style="min-width: 1024px; top: inherit; bottom: 100%; margin-bottom: -236px;">
+                                <h6>Reportes</h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="cbl-dropdown-subcategory">Financieros y Económicos</h6>
+                                        <ul>
+                                            <li><a href="/modulos/reportes/ventas-vs-compras.aspx" id="liReportesVentasVsCompras" data-formulario="ventas-vs-compras">Comparativo</a></li>
+                                            <li><a href="/modulos/reportes/compras-por-categoria.aspx" id="liReportesComprasPorCategoria" data-formulario="compras-por-categoria">Egresos por CC</a></li>
+                                            <li><a href="/modulos/reportes/compras-por-categoria-mensual.aspx" id="liReportesComprasPorCategoriaMensual" data-formulario="compras-por-categoria-mensual">Egresos mensuales por CC</a></li>
+                                            <li><a href="/modulos/reportes/IngresosEgresosCategorias.aspx" id="liReportesIngresosEgresosCategorias" data-formulario="ingresosEgresosCategorias">Ingresos vs Egresos por CC</a></li>
+                                            <li><a href="/modulos/reportes/utilidad.aspx" id="liReportesLiquidezAnual" data-formulario="utilidad">Liquidez anual</a></li>
+                                            <li><a href="/modulos/reportes/flujoIngresosEgresos.aspx" id="liReportesFlujoIngresosEgresos" data-formulario="flujoIngresosEgresos">Saldos de liquidez</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="cbl-dropdown-subcategory">Impositivos</h6>
+                                        <ul>
+                                            <li id="liIva1" data-formulario="iva-ventas"><a href="/modulos/reportes/iva-ventas.aspx">IVA Ventas</a></li>
+                                            <li id="liIva2" data-formulario="iva-compras"><a href="/modulos/reportes/iva-compras.aspx">IVA Compras</a></li>
+                                            <li id="liReportesIvaPosicion" data-formulario="ivaposicion"><a href="/modulos/reportes/IvaPosicion.aspx">Posición IVA</a></li>
+                                            <li><a href="/modulos/reportes/retenciones.aspx" id="liReportesRetenciones" data-formulario="retenciones">Retenciones</a></li>
+                                            <li><a href="/modulos/reportes/percepciones.aspx" id="liReportesPercepciones" data-formulario="percepciones">Percepciones</a></li>
+                                            <li><a href="/modulos/reportes/citiVentas.aspx" id="liReportesCitiVentas" data-formulario="citiVentas">Libro IVA Digital / CITI</a></li>
+                                            <li><a href="/modulos/reportes/SicoreRetEmitidas.aspx" id="liReportesSicore" data-formulario="SicoreRetEmitidas">Agentes de recaudación</a></li>
+                                            <li><a href="/modulos/reportes/CM-SifereWeb.aspx" id="liReportesSifere" data-formulario="CM-SifereWeb">CM - SifereWeb</a></li>
+                                            <li><a href="/modulos/reportes/ventasPorProvincias.aspx" id="liReportesVentasPorProvincias" data-formulario="ventasPorProvincias">Ventas por destino</a></li>
+                                            <li><a href="/modulos/reportes/comprasPorProvincias.aspx" id="liReportesComprasPorProvincias" data-formulario="comprasPorProvincias">Compras por destino</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="cbl-dropdown-subcategory">Productos</h6>
+                                        <ul>
+                                            <li><a href="/modulos/reportes/stock.aspx" id="liReportesStock" data-formulario="stock">Stock</a></li>
+                                            <li><a href="/modulos/reportes/stockMinimo.aspx" id="liReportesStockMinimo" data-formulario="stockMinimo">Stock Mínimo</a></li>
+                                            <li><a href="/modulos/reportes/rentabilidad-de-productos.aspx" id="liReportesRentabilidad" data-formulario="rentabilidad-de-productos">Rentabilidad de productos</a></li>
+                                            <li><a href="/modulos/reportes/rentabilidad-de-productos-det.aspx" id="liReportesRentabilidadDet" data-formulario="rentabilidad-de-productos-det">Rentabilidad por venta</a></li>
+                                            <li><a href="/modulos/reportes/historicoStock.aspx" id="liReportesHistoricoStock" data-formulario="historicoStock">Entradas y salidas</a></li>
+                                            <li><a href="/modulos/reportes/reservasDetalle.aspx" id="liReportesReservasDetalle" data-formulario="reservasDetalle">Detalle de reservas</a></li>
+                                            <li><a href="/modulos/reportes/rnk-conceptos.aspx" id="liReportesRankingPorProducto" data-formulario="rnk-conceptos">Ranking</a></li>
+                                            <li><a href="/modulos/reportes/historicoCompras.aspx" id="liReportesHistoricoCompras" data-formulario="historicoCompras">Historial de compras</a></li>
+                                            <li><a href="/modulos/reportes/productosPorCliente.aspx" id="liReportesProductosPorCliente" data-formulario="productosPorCliente">Ventas por cliente</a></li>
+                                            <li><a href="/modulos/reportes/stockPorDespachoDeImportacion.aspx" id="liReportesStockPorDespachoImportacion" data-formulario="stockPorDespachoDeImportacion">Stock por despacho</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="cbl-dropdown-subcategory">Gestión</h6>
+                                        <ul>
+                                            <li><a href="/modulos/reportes/cc.aspx" id="liReportesCuentaCorriente" data-formulario="cc">Cuenta corriente</a></li>
+                                            <li><a href="/modulos/reportes/saldosClientes.aspx" id="liReportesSaldosClientes" data-formulario="saldosClientes">Saldos de clientes</a></li>
+                                            <li><a href="/modulos/reportes/cobranzasPendientes.aspx" id="liReportesCobranzasPendientes" data-formulario="cobranzasPendientes">Cobranzas pendientes</a></li>
+                                            <li><a href="/modulos/reportes/saldosProveedores.aspx" id="liReportesSaldosProveedores" data-formulario="saldosProveedores">Saldos de proveedores</a></li>
+                                            <li><a href="/modulos/reportes/cuentasPagar.aspx" id="liReportesCuentasAPagar" data-formulario="cuentasPagar">Cuentas a pagar</a></li>
+                                            <li><a href="/modulos/reportes/pagoprov.aspx" id="liReportesPagoAProveedores" data-formulario="pagoprov">Pagos a proveedores</a></li>
+                                            <li><a href="/modulos/reportes/rnk-clientes.aspx" id="liReportesRankingPorCliente" data-formulario="rnk-clientes">Ranking de clientes</a></li>
+                                            <li><a href="/modulos/reportes/ventas-por-integracion-mensual.aspx" id="liReporteIntegraciones" data-formulario="ventas-por-integracion-mensual">Ventas por integración</a></li>
+                                            <li><a href="/modulos/reportes/ventas-por-pdv-mensual.aspx" id="liReportePuntosDeVentas" data-formulario="ventas-por-pdv-mensual">Ventas por puntos de venta</a></li>
+                                            <li><a href="/modulos/reportes/ventasPorCondicion.aspx" id="liReporteCondicion" data-formulario="ventasporCondicion">Ventas por condición de venta</a></li>
+                                            <li><a href="/modulos/reportes/comprasPorCliente.aspx" id="liReportesComprasPorCliente" data-formulario="comprasPorCliente">Compras por cliente</a></li>
+                                            <li><a href="/modulos/reportes/trackingHora.aspx" id="liReportesTrackingHoras" data-formulario="trackingHora">Tracking horas</a></li>
+                                            <li><a href="/modulos/reportes/comisiones.aspx" id="liReporteComisiones" data-formulario="comisiones">Comisiones por vendedor</a></li>
+                                            <li><a href="/modulos/reportes/ventasDelMes.aspx" id="liReportesVentasDelMes" data-formulario="ventasDelMes">Ventas mensuales</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="cbl-sidebar-bottom-content">
+                    <ul class="cbl-sidebar-list cbl-secondary-list">
+                        <li>
+                            <button data-toggle="tooltip" data-placement="right" title="Tipo de cambio">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-exchange"></i> <span class="cbl-menu-label">Tipo de cambio</span>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-toggle="tooltip" data-placement="right" title="Potenciá tu plan">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-shopping-bag"></i> <span class="cbl-menu-label">Potenciá tu
+                                        plan</span>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-toggle="tooltip" data-placement="right" title="Funcionalidades">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-laptop-code"></i> <span
+                                        class="cbl-menu-label">Funcionalidades</span>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-toggle="tooltip" data-placement="right" title="Centro de ayuda">
+                                <div class="cbl-icon-wrapper">
+                                    <i class="la la-question-circle"></i> <span class="cbl-menu-label">Centro de
+                                        ayuda</span>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="cbl-sidebar-bottom-content">
-                <ul class="cbl-sidebar-list cbl-secondary-list">
-                    <li>
-                        <button data-toggle="tooltip" data-placement="right" title="Tipo de cambio">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-exchange"></i> <span class="cbl-menu-label">Tipo de cambio</span>
-                            </div>
-                        </button>
-                    </li>
-                    <li>
-                        <button data-toggle="tooltip" data-placement="right" title="Potenciá tu plan">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-shopping-bag"></i> <span class="cbl-menu-label">Potenciá tu plan</span>
-                            </div>
-                        </button>
-                    </li>
-                    <li>
-                        <button data-toggle="tooltip" data-placement="right" title="Funcionalidades">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-laptop-code"></i> <span class="cbl-menu-label">Funcionalidades</span>
-                            </div>
-                        </button>
-                    </li>
-                    <li>
-                        <button data-toggle="tooltip" data-placement="right" title="Centro de ayuda">
-                            <div class="cbl-icon-wrapper">
-                                <i class="la la-question-circle"></i> <span class="cbl-menu-label">Centro de
-                                    ayuda</span>
-                            </div>
-                        </button>
-                    </li>
-                </ul>
+
+            <div class="cbl-menu-wrapper-mobile content-menu">
+                <div class="dropdown-menu-wrapper current" data-ref="main">
+                    <ul class="cbl-menu-primary cbl-main-category">
+                        <li><a href="#"><i class="la la-dashboard"></i>Dashboard</a></li>
+                        <li><a href="#" data-link="ventas"><i class="la la-receipt"></i>Ventas</a></li>
+                        <li><a href="#" data-link="compras"><i class="la la-tag"></i>Compras</a></li>
+                        <li><a href="#" data-link="tesoreria"><i class="la la-university"></i>Tesorería</a></li>
+                        <li><a href="#" data-link="inventarios"><i class="la la-box"></i>Inventarios</a></li>
+                        <li><a href="#" data-link="contabilidad"><i class="la la-book-open"></i>Contabilidad</a></li>
+                        <li><a href="#" data-link="reportes"><i class="la la-bar-chart"></i>Reportes</a></li>
+                    </ul>
+
+                    <ul class="cbl-main-category">
+                        <li><a href="#" data-link="herramientas"><i class="la la-wrench"></i>Herramientas</a></li>
+                        <li><a href="#" data-link="notificaciones"><i class="la la-bell"></i>Notificaciones</a></li>
+                        <li><a href="/shopping.aspx"><i class="la la-shopping-bag"></i>Potenciá tu plan</a></li>
+                        <li><a href="#"><i class="la la-exchange"></i>Tipo de cambio</a></li>
+                    </ul>
+
+                    <ul class="cbl-main-category">
+                        <li><a href="/modulos/seguridad/referidos.aspx"><i class="la la-users"></i>¡Ganá +$.5000!</a></li>
+                        <li><a href="/cronograma.aspx"><i class="la la-laptop-code"></i>Funcionalidades</a></li>
+                        <li><a href="https://ayuda.contabilium.com/hc/es" target="_blank"><i class="la la-question-circle"></i>Centro de ayuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="ventas">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="https://pos.contabilium.com" id="liVentasPOS" data-formulario="comprobantes" target="_blank"><span>Ventas por POS</span></a></li>
+                                    <li><a href="/comprobantes.aspx" id="liVentasComprobantes" data-formulario="comprobantes"><span>Facturación</span></a></li>
+                                    <li><a href="/modulos/ventas/integraciones.aspx" id="liMercadoLibreA" data-formulario="integraciones"><span>Integraciones (Ventas Online)</span></a></li>
+                                    <li><a href="/cobranzas.aspx" id="liVentasCobranzas" data-formulario="cobranzas"><span>Cobranzas</span></a></li>
+                                    <li><a href="/presupuestos.aspx" id="liVentasPresupuestos" data-formulario="presupuestos"><span>Presupuestos</span></a></li>
+                                    <li><a href="/Abonos.aspx" id="liVentasAbonos" data-formulario="Abonos"><span>Abonos</span></a></li>
+                                    <li><a href="/conceptos.aspx" id="liVentasProductosyServicios" data-formulario="conceptos"><span>Productos y servicios</span></a></li>
+                                    <li><a href="/personas.aspx?tipo=c" id="liVentasClientes" data-formulario="personas"><span>Clientes</span></a></li>
+                                    <li><a href="/modulos/ventas/ordenesVenta.aspx" id="liVentaOrdenes" data-formulario="ordenesVenta"><span>Ordenes de venta</span></a></li>
+                                    <li><a href="/modulos/ventas/remitos.aspx#/remitos" id="liVentaRemitos" data-formulario="remitos"><span>Remitos personalizados</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="compras">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/compras/ordenesCompras.aspx?tipo=p" id="liComprasOrdenes" data-formulario="ordenesCompras"><span>Ordenes de compra</span></a></li>
+                                    <li><a href="/modulos/compras/compras.aspx" id="liComprasComprobantes" data-formulario="compras"><span>Comprobantes</span></a></li>
+                                    <li><a href="/modulos/compras/pagos.aspx" id="liComprasPagos" data-formulario="pagos"><span>Pagos</span></a></li>
+                                    <li><a href="/personas.aspx?tipo=p" id="liComprasProveedores" data-formulario="personas"><span>Proveedores</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="tesoreria">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/tesoreria/bancos.aspx" id="liTesoreriaBancos" data-formulario="bancos"><span>Entidades</span></a></li>
+                                    <li><a href="/modulos/tesoreria/caja.aspx" id="liTesoreriaCaja" data-formulario="caja"><span>Cajas</span></a></li>
+                                    <li><a href="/modulos/tesoreria/cheques.aspx" id="liTesoreriaCheques" data-formulario="cheques"><span>Cheques</span></a></li>
+                                    <li><a href="/modulos/reportes/DetalleBancario.aspx" id="liTesoreriaDetalleBancario" data-formulario="DetalleBancario">Movimientos bancarios</a></li>
+                                    <li><a href="/modulos/tesoreria/MovimientoDeFondos.aspx" id="liTesoreriaMovimientosFondos" data-formulario="MovimientoDeFondos"><span>Movimiento de fondos</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="inventarios">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/inventarios/inventarios.aspx" id="liDepositos" data-formulario="inventarios"><span>Depósitos</span></a></li>
+                                    <li><a href="/modulos/inventarios/modificacionStock.aspx" id="liModificacionStock" data-formulario="modificacionStock"><span>Modificación de stock</span></a></li>
+                                    <li><a href="/modulos/inventarios/movimientosDeStock.aspx" id="liMovimientosDepositos" data-formulario="movimientosDeStock"><span>Movimientos entre depósitos</span></a></li>
+                                    <li><a href="/importar.aspx?tipo=Productos" id="liImportacionMasivaProductos" data-formulario="importar"><span>Importación masiva de productos</span></a></li>
+                                    <li><a href="/importar.aspx?tipo=Stock" id="liActualizacionMasivaStock" data-formulario="importar"><span>Actualización masiva de stock</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="contabilidad">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/contabilidad/plandecuentas.aspx" id="liContabilidadPlanDeCuentas" data-formulario="plandecuentas"><span>Plan de cuentas</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroDiario.aspx" id="liContabilidadLibroDiario" data-formulario="LibroDiario"><span>Libro diario</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroDiarioCopiativo.aspx" id="liContabilidadLibroDiarioCopiativo" data-formulario="LibroDiarioCopiativo"><span>Libro diario copiativo</span></a></li>
+                                    <li><a href="/modulos/reportes/LibroMayor.aspx" id="liContabilidadLibroMayor" data-formulario="LibroMayor"><span>Libro mayor</span></a></li>
+                                    <li><a href="/modulos/reportes/BalanceGeneral.aspx" id="liContabilidadBalanceGeneral" data-formulario="BalanceGeneral"><span>Balance general</span></a></li>
+                                    <li><a href="/modulos/contabilidad/asientosManuales.aspx" id="liContabilidadAsientosManuales" data-formulario="asientosManuales"><span>Asientos manuales</span></a></li>
+                                    <li><a href="/modulos/reportes/EstadoResultado.aspx" id="liContabilidadEstadoResultado" data-formulario="EstadoResultado"><span>Estado de resultado</span></a></li>
+                                    <li><a href="/modulos/contabilidad/modificarCuentas.aspx" id="liContabilidadModificarCuentas" data-formulario="modificarCuentas"><span>Modificar cuentas masivamente</span></a></li>
+                                    <li><a href="/modulos/contabilidad/asientosPendientes.aspx" id="liContabilidadAsientosPendientes" data-formulario="asientosPendientes"><span>Reprocesar asientos</span></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="reportes">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="#" data-link="financieros-y-economicos"><span>Financieros y Económicos</span></a></li>
+                        <li><a href="#" data-link="impositivos"><span>Impositivos</span></a></li>
+                        <li><a href="#" data-link="productos"><span>Productos</span></a></li>
+                        <li><a href="#" data-link="gestion"><span>Gestión</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="financieros-y-economicos">
+                    <ul>
+                        <li><a href="#" data-link="reportes" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/reportes/ventas-vs-compras.aspx" id="liReportesVentasVsCompras" data-formulario="ventas-vs-compras">Comparativo</a></li>
+                                            <li><a href="/modulos/reportes/compras-por-categoria.aspx" id="liReportesComprasPorCategoria" data-formulario="compras-por-categoria">Egresos por CC</a></li>
+                                            <li><a href="/modulos/reportes/compras-por-categoria-mensual.aspx" id="liReportesComprasPorCategoriaMensual" data-formulario="compras-por-categoria-mensual">Egresos mensuales por CC</a></li>
+                                            <li><a href="/modulos/reportes/IngresosEgresosCategorias.aspx" id="liReportesIngresosEgresosCategorias" data-formulario="ingresosEgresosCategorias">Ingresos vs Egresos por CC</a></li>
+                                            <li><a href="/modulos/reportes/utilidad.aspx" id="liReportesLiquidezAnual" data-formulario="utilidad">Liquidez anual</a></li>
+                                            <li><a href="/modulos/reportes/flujoIngresosEgresos.aspx" id="liReportesFlujoIngresosEgresos" data-formulario="flujoIngresosEgresos">Saldos de liquidez</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="impositivos">
+                    <ul>
+                        <li><a href="#" data-link="reportes" data-action="back">Volver</a></li>
+                        <li id="liIva1" data-formulario="iva-ventas"><a href="/modulos/reportes/iva-ventas.aspx">IVA Ventas</a></li>
+                                            <li id="liIva2" data-formulario="iva-compras"><a href="/modulos/reportes/iva-compras.aspx">IVA Compras</a></li>
+                                            <li id="liReportesIvaPosicion" data-formulario="ivaposicion"><a href="/modulos/reportes/IvaPosicion.aspx">Posición IVA</a></li>
+                                            <li><a href="/modulos/reportes/retenciones.aspx" id="liReportesRetenciones" data-formulario="retenciones">Retenciones</a></li>
+                                            <li><a href="/modulos/reportes/percepciones.aspx" id="liReportesPercepciones" data-formulario="percepciones">Percepciones</a></li>
+                                            <li><a href="/modulos/reportes/citiVentas.aspx" id="liReportesCitiVentas" data-formulario="citiVentas">Libro IVA Digital / CITI</a></li>
+                                            <li><a href="/modulos/reportes/SicoreRetEmitidas.aspx" id="liReportesSicore" data-formulario="SicoreRetEmitidas">Agentes de recaudación</a></li>
+                                            <li><a href="/modulos/reportes/CM-SifereWeb.aspx" id="liReportesSifere" data-formulario="CM-SifereWeb">CM - SifereWeb</a></li>
+                                            <li><a href="/modulos/reportes/ventasPorProvincias.aspx" id="liReportesVentasPorProvincias" data-formulario="ventasPorProvincias">Ventas por destino</a></li>
+                                            <li><a href="/modulos/reportes/comprasPorProvincias.aspx" id="liReportesComprasPorProvincias" data-formulario="comprasPorProvincias">Compras por destino</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="productos">
+                    <ul>
+                        <li><a href="#" data-link="reportes" data-action="back">Volver</a></li>
+                        <li id="liIva1" data-formulario="iva-ventas"><a href="/modulos/reportes/iva-ventas.aspx">IVA Ventas</a></li>
+                        <li><a href="/modulos/reportes/stock.aspx" id="liReportesStock" data-formulario="stock">Stock</a></li>
+                        <li><a href="/modulos/reportes/stockMinimo.aspx" id="liReportesStockMinimo" data-formulario="stockMinimo">Stock Mínimo</a></li>
+                        <li><a href="/modulos/reportes/rentabilidad-de-productos.aspx" id="liReportesRentabilidad" data-formulario="rentabilidad-de-productos">Rentabilidad de productos</a></li>
+                        <li><a href="/modulos/reportes/rentabilidad-de-productos-det.aspx" id="liReportesRentabilidadDet" data-formulario="rentabilidad-de-productos-det">Rentabilidad por venta</a></li>
+                        <li><a href="/modulos/reportes/historicoStock.aspx" id="liReportesHistoricoStock" data-formulario="historicoStock">Entradas y salidas</a></li>
+                        <li><a href="/modulos/reportes/reservasDetalle.aspx" id="liReportesReservasDetalle" data-formulario="reservasDetalle">Detalle de reservas</a></li>
+                        <li><a href="/modulos/reportes/rnk-conceptos.aspx" id="liReportesRankingPorProducto" data-formulario="rnk-conceptos">Ranking</a></li>
+                        <li><a href="/modulos/reportes/historicoCompras.aspx" id="liReportesHistoricoCompras" data-formulario="historicoCompras">Historial de compras</a></li>
+                        <li><a href="/modulos/reportes/productosPorCliente.aspx" id="liReportesProductosPorCliente" data-formulario="productosPorCliente">Ventas por cliente</a></li>
+                        <li><a href="/modulos/reportes/stockPorDespachoDeImportacion.aspx" id="liReportesStockPorDespachoImportacion" data-formulario="stockPorDespachoDeImportacion">Stock por despacho</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="gestion">
+                    <ul>
+                        <li><a href="#" data-link="reportes" data-action="back">Volver</a></li>
+                        <li><a href="/modulos/reportes/cc.aspx" id="liReportesCuentaCorriente" data-formulario="cc">Cuenta corriente</a></li>
+                                            <li><a href="/modulos/reportes/saldosClientes.aspx" id="liReportesSaldosClientes" data-formulario="saldosClientes">Saldos de clientes</a></li>
+                                            <li><a href="/modulos/reportes/cobranzasPendientes.aspx" id="liReportesCobranzasPendientes" data-formulario="cobranzasPendientes">Cobranzas pendientes</a></li>
+                                            <li><a href="/modulos/reportes/saldosProveedores.aspx" id="liReportesSaldosProveedores" data-formulario="saldosProveedores">Saldos de proveedores</a></li>
+                                            <li><a href="/modulos/reportes/cuentasPagar.aspx" id="liReportesCuentasAPagar" data-formulario="cuentasPagar">Cuentas a pagar</a></li>
+                                            <li><a href="/modulos/reportes/pagoprov.aspx" id="liReportesPagoAProveedores" data-formulario="pagoprov">Pagos a proveedores</a></li>
+                                            <li><a href="/modulos/reportes/rnk-clientes.aspx" id="liReportesRankingPorCliente" data-formulario="rnk-clientes">Ranking de clientes</a></li>
+                                            <li><a href="/modulos/reportes/ventas-por-integracion-mensual.aspx" id="liReporteIntegraciones" data-formulario="ventas-por-integracion-mensual">Ventas por integración</a></li>
+                                            <li><a href="/modulos/reportes/ventas-por-pdv-mensual.aspx" id="liReportePuntosDeVentas" data-formulario="ventas-por-pdv-mensual">Ventas por puntos de venta</a></li>
+                                            <li><a href="/modulos/reportes/ventasPorCondicion.aspx" id="liReporteCondicion" data-formulario="ventasporCondicion">Ventas por condición de venta</a></li>
+                                            <li><a href="/modulos/reportes/comprasPorCliente.aspx" id="liReportesComprasPorCliente" data-formulario="comprasPorCliente">Compras por cliente</a></li>
+                                            <li><a href="/modulos/reportes/trackingHora.aspx" id="liReportesTrackingHoras" data-formulario="trackingHora">Tracking horas</a></li>
+                                            <li><a href="/modulos/reportes/comisiones.aspx" id="liReporteComisiones" data-formulario="comisiones">Comisiones por vendedor</a></li>
+                                            <li><a href="/modulos/reportes/ventasDelMes.aspx" id="liReportesVentasDelMes" data-formulario="ventasDelMes">Ventas mensuales</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="herramientas">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li><a href="/file-explorer.aspx" id="liHerramientasExploradorArchivos2" data-formulario="file-explorer">Explorador de archivos</a></li>
+                        <li><a href="#" data-link="importacion-masiva">Importación masiva</a></li>
+                        <li><a href="/modulos/ventas/trackingHoras.aspx" id="liHerramientasTrackingHoras2" data-formulario="trackingHoras">Tracking de horas</a></li>
+                        <li><a href="/alertas.aspx" id="liHerramientasAlertas2" data-formulario="alertas">Configurar alertas</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="importacion-masiva">
+                    <ul>
+                        <li><a href="#" data-link="herramientas" data-action="back">Volver</a></li>
+                        <li><a href="/importar.aspx?tipo=Clientes" id="liHerramientasImportarClientes2" data-formulario="importar">Clientes</a></li>
+                        <li><a href="/importar.aspx?tipo=Proveedores" id="liHerramientasImportarProveedores2" data-formulario="importar">Proveedores</a></li>
+                        <li><a href="/importar.aspx?tipo=Productos" id="liHerramientasImportarProductos2" data-formulario="importar">Productos</a></li>
+                        <li><a href="/importar.aspx?tipo=Combos" id="liHerramientasImportarCombos2" data-formulario="importar">Combos</a></li>
+                        <li><a href="/importar.aspx?tipo=Servicios" id="liHerramientasImportarServicios2" data-formulario="importar">Servicios</a></li>
+                        <li><a href="/importar.aspx?tipo=Facturas" id="liHerramientasImportarFacturas2" data-formulario="importar">Facturas de venta simple</a></li>
+                        <li><a href="/importar.aspx?tipo=FacturasDetalle" id="liHerramientasImportarFacturasDetalle2" data-formulario="importar">Facturas de venta con items</a></li>
+                        <li><a href="/importar.aspx?tipo=FacturasCompras" id="liHerramientasImportarFacturasCompras2" data-formulario="importar">Facturas de compras</a></li>
+                        <li id="liImportarPlanDeCuentas2" data-formulario="importar"><a href="/importar.aspx?tipo=PlanDeCuentas">Plan de cuentas</a></li>
+                        <li><a href="/importar.aspx?tipo=MovimientosBancarios" id="liHerramientasImportarMovBancarios2" data-formulario="importar">Movimientos bancarios</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="dropdown-menu-wrapper hide-rt" data-ref="notificaciones">
+                    <ul>
+                        <li><a href="#" data-link="main" data-action="back">Volver</a></li>
+                        <li>
+                            <a href="#">
+                                <span class="title">Comprobante Emitido</span>
+                                <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="title">Comprobante Emitido</span>
+                                <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="title">Comprobante Emitido</span>
+                                <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="title">Comprobante Emitido</span>
+                                <span class="caption">FCB 0001-00000001 se emitió correctamente</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
             </div>
+
+
+
         </div>
+    </div>
     </div>
 
     <div class="cbl-usermenu-mobile">
@@ -487,7 +725,7 @@
     });*/
 
     $("[data-link]").click(function () {
-        var dropdown = $(this).closest('.dropdown-menu');
+        var dropdown = $(this).closest('.content-menu');
         var ref = $(this).data("link");
         //$(dropdown).find("[data-ref=" + ref + "]").show();
         //$(this).closest(".dropdown-menu-wrapper").hide();
