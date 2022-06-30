@@ -2,10 +2,6 @@ body {
     background-color: #f1f1f1;
 }
 
-
-
-
-
 .cbl-bg-secondary {
     background-color: #6C63FF !important;
 }
@@ -28,7 +24,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: auto;
     background-color: #fff;
     z-index: 1000;
     border-bottom: solid 1px #ddd;
@@ -49,12 +45,28 @@ body {
     transition: opacity ease .4s;
 }
 
+.cbl-top-banner {
+    background: #6c63ff;
+    text-align: center;
+    color: #fff;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 3px;
+}
+
+.cbl-top-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .cbl-top-nav-wrapper {
     display: flex;
     flex-direction: row;
     margin: auto 0;
     padding: 0 20px 0 85px;
-    height: 100%;
+    height: 60px;
     position: relative;
     transition: all ease .4s;
 }
@@ -292,11 +304,16 @@ body {
     top: 0;
     left: 0;
     width: 65px;
-    height: 100%;
+    height: 100vh;
     background-color: #00A692;
     z-index: 1020;
     border-right: solid 1px #ddd;
     transition: all ease .4s;
+}
+
+body.cbl-top-banner-visible .cbl-menu-nav {
+    top: 24px;
+    height: calc(100vh - 24px);
 }
 
 .cbl-menu-nav .cbl-menu-wrapper-desktop {
@@ -308,7 +325,7 @@ body {
 .cbl-menu-nav .cbl-sidebar-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 /* Scrollbar */
@@ -588,6 +605,7 @@ body.sidebar-open .cbl-menu-nav .cbl-sidebar-list .tooltip {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
 .cbl-dropdown ul>li>a:hover {
@@ -625,7 +643,7 @@ body.sidebar-open .cbl-menu-nav .cbl-sidebar-list .tooltip {
     position: absolute;
     top: 50%;
     right: inherit;
-    left: 0px;
+    left: 2px;
     margin-top: -4px;
     font-size: 12px;
     color: #777;
@@ -673,7 +691,7 @@ body.sidebar-open .cbl-menu-nav .cbl-sidebar-list .tooltip {
 }
 
 .cbl-dropdown .dropdown-list-notifications .title {
-    display: inline-block;
+    display: block;
     width: 100%;
     color: #131313;
     white-space: nowrap;
@@ -683,7 +701,7 @@ body.sidebar-open .cbl-menu-nav .cbl-sidebar-list .tooltip {
 }
 
 .cbl-dropdown .dropdown-list-notifications .caption {
-    display: inline-block;
+    display: block;
     width: 100%;
     font-size: 12px;
     color: #666;
@@ -914,8 +932,12 @@ body.usermenu-open {
 
 .cbl-content-wrapper {
     position: relative;
-    padding: 100px 20px 20px 85px;
+    padding: 60px 0px 0px 65px;
     transition: all ease .4s;
+}
+
+body.cbl-top-banner-visible .cbl-content-wrapper {
+    padding-top: 84px;
 }
 
 body.sidebar-open .cbl-menu-nav {
@@ -925,7 +947,7 @@ body.sidebar-open .cbl-menu-nav {
 
 body.sidebar-open .cbl-content-wrapper,
 body.sidebar-open .cbl-top-nav-wrapper {
-    padding-left: 240px;
+    padding-left: 220px;
 }
 
 .cbl-menu-nav .cbl-menu-wrapper-mobile {
@@ -1040,6 +1062,9 @@ body.sidebar-open .cbl-top-nav-wrapper {
 .cbl-menu-nav .cbl-noti-list-mobile .title {
     font-weight: 500;
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cbl-menu-nav .cbl-noti-list-mobile .caption {
@@ -1047,6 +1072,9 @@ body.sidebar-open .cbl-top-nav-wrapper {
     opacity: .8;
     font-size: 12px;
     margin: 3px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cbl-menu-nav .cbl-icon-badge {
@@ -1055,11 +1083,26 @@ body.sidebar-open .cbl-top-nav-wrapper {
     right: 30px;
     margin: 0px;
     left: inherit;
-    border: solid 2px #00e3c8;
+    border: none;
     font-size: 12px;
     padding: 0 8px;
-    background: transparent;
+    background: #fff;
     line-height: 1.6;
+    color: #00a692;
+    font-weight: 600;
+}
+
+.cbl-top-banner a:focus-visible,
+.cbl-menu-nav .cbl-logo-button-toggle:focus-visible,
+.cbl-menu-nav .cbl-sidebar-list>li>a:focus-visible,
+.cbl-company-input-wrapper select:focus-visible,
+.cbl-top-icon-list>li>button:focus-visible, 
+.cbl-top-icon-list>li>a:focus-visible,
+.cbl-user-button:focus-visible,
+.cbl-top-nav .select2-container *:focus-visible,
+.cbl-search-wrapper .cbl-search-input:focus-visible,
+.cbl-menu-nav .cbl-sidebar-dropdown ul a:focus-visible {
+    box-shadow: inset 0 1px 0 0 rgb(102 191 255 / 50%), 0 0 0 4px rgb(0 0 0 / 15%) !important;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1084,10 +1127,13 @@ body.sidebar-open .cbl-top-nav-wrapper {
 
 @media only screen and (max-width: 800px) {
     .cbl-content-wrapper {
-        padding: 100px 20px 20px 20px !important;
+        padding: 60px 0px 0px 0px !important;
+    }
+
+    body.cbl-top-banner-visible .cbl-content-wrapper {
+        padding-top: 84px !important;
     }
     
-
     .cbl-top-icon-list,
     .cbl-company-input-wrapper,
     .cbl-user-button {
@@ -1157,5 +1203,14 @@ body.sidebar-open .cbl-top-nav-wrapper {
 
     .cbl-menu-nav .cbl-menu-wrapper-mobile {
         display: initial;
+    }
+
+    .cbl-top-banner {
+        height: auto;
+    }
+
+    body.cbl-top-banner-visible .cbl-menu-nav {
+        top: 0;
+        height: 100vh;
     }
 }

@@ -20,12 +20,14 @@
 
 </head>
 
-<body>
+<body class="cbl-top-banner-visible">
+    <!-- top nav -->
     <header class="cbl-top-nav">
-        <a href="#" class="cbl-logo">
-            <img src="img/logo.svg" alt="Contabilium" width="100%" />
-        </a>
+        <div class="cbl-top-banner">¡Validación de correo pendiente! Su cuenta se deshabilitará en las próximas 24 horas. <a href="">Actívela desde aquí</a></div>
         <div class="cbl-top-nav-wrapper">
+            <a href="#" class="cbl-logo">
+                <img src="img/logo.svg" alt="Contabilium" width="100%" />
+            </a>
 
             <ul class="cbl-mobile-buttons">
                 <li>
@@ -75,26 +77,28 @@
                             <div class="dropdown-menu-wrapper" data-ref="main">
                                 <h6>Herramientas</h6>
                                 <ul class="dropdown-list">
-                                    <li><a href="#">Explorador de archivos</a></li>
+                                    <li><a href="/file-explorer.aspx">Explorador de archivos</a></li>
                                     <li><a data-link="submenu1">Importación masiva</a></li>
-                                    <li><a href="#">Tracking de horas</a></li>
-                                    <li><a href="#">Configurar alertas</a></li>
+                                    <li><a href="/modulos/ventas/trackingHoras.aspx">Tracking de horas</a></li>
+                                    <li><a href="/alertas.aspx">Configurar alertas</a></li>
                                 </ul>
                             </div>
 
                             <div class="dropdown-menu-wrapper hide-rt" data-ref="submenu1">
                                 <ul class="dropdown-list">
                                     <li><a data-link="main" data-action="back">Volver</a></li>
-                                    <li><a>Clientes</a></li>
-                                    <li><a>Proveedores</a></li>
-                                    <li><a>Productos</a></li>
-                                    <li><a>Combos</a></li>
-                                    <li><a>Servicios</a></li>
-                                    <li><a>Facturas de venta simple</a></li>
-                                    <li><a>Facturas de venta con items</a></li>
-                                    <li><a>Facturas de compras</a></li>
-                                    <li><a>Plan de cuentas</a></li>
-                                    <li><a>Movimientos bancarios</a></li>
+                                    <li><a href="/importar.aspx?tipo=Clientes">Clientes</a></li>
+                                    <li><a href="/importar.aspx?tipo=Proveedores">Proveedores</a></li>
+                                    <li><a href="/importar.aspx?tipo=Productos">Productos</a></li>
+                                    <li><a href="/importar.aspx?tipo=Combos">Combos</a></li>
+                                    <li><a href="/importar.aspx?tipo=Servicios">Servicios</a></li>
+                                    <li><a href="/importar.aspx?tipo=Facturas">Facturas de venta simple</a></li>
+                                    <li><a href="/importar.aspx?tipo=FacturasDetalle">Facturas de venta con
+                                            items</a></li>
+                                    <li><a href="/importar.aspx?tipo=FacturasCompras">Facturas de compras</a></li>
+                                    <li><a href="/importar.aspx?tipo=PlanDeCuentas">Plan de cuentas</a></li>
+                                    <li><a href="/importar.aspx?tipo=MovimientosBancarios">Movimientos bancarios</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -179,6 +183,8 @@
             </div>
         </div>
     </header>
+
+    <!-- menu nav - sidebar -->
     <div class="cbl-menu-nav">
         <div class="cbl-sidebar-wrapper">
             <div class="cbl-menu-wrapper-desktop">
@@ -308,7 +314,7 @@
                                     <i class="la la-book-open"></i> <span class="cbl-menu-label">Contabilidad</span>
                                 </div>
                             </a>
-                            <div class="cbl-sidebar-dropdown dropdown-menu">
+                            <div class="cbl-sidebar-dropdown dropdown-menu" style="top: inherit; bottom: 100%; margin-bottom: -194px;">
                                 <h6>Contabilidad</h6>
                                 <ul>
                                     <li><a href="/modulos/contabilidad/plandecuentas.aspx"
@@ -497,7 +503,7 @@
                 <div class="cbl-sidebar-bottom-content">
                     <ul class="cbl-sidebar-list cbl-secondary-list">
                         <li>
-                            <a class="cbl-exchange-button" data-toggle="tooltip" data-placement="right"
+                            <a href="#modalExchange" role="button" class="cbl-exchange-button" data-toggle="tooltip" data-placement="right"
                                 title="Tipo de cambio">
                                 <div class="cbl-icon-wrapper">
                                     <i class="la la-exchange"></i> <span class="cbl-menu-label">Tipo de cambio</span>
@@ -865,8 +871,8 @@
 
         </div>
     </div>
-    </div>
 
+    <!-- user menu mobile -->
     <div class="cbl-usermenu-mobile">
         <div class="cbl-usermenu-wrapper">
             <div class="cbl-user-avatar">
@@ -911,8 +917,7 @@
         </div>
     </div>
 
-
-
+    <!-- content wrapper -->
     <div class="cbl-content-wrapper">
 
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -925,8 +930,7 @@
 
     </div>
 
-
-
+    <!-- modal tipo de cambio -->
     <div class="modal fade" tabindex="-1" role="dialog" id="modalExchange">
         <div class="modal-dialog" role="document" style="max-width: 500px">
             <div class="modal-content">
@@ -953,7 +957,8 @@
                 </div>
             </div><!-- /.modal-content -->
         </div>
-        <!-- /.modal-dial
+    </div>
+
 </body>
 
 
@@ -963,218 +968,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/select2.min.js"></script>
-
-        <script>
-
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-
-            // Select2 Initialization
-            $(document).ready(function () {
-                $('.js-example-basic-single').select2();
-            });
-            /*$(window).click(function() {
-                $(this).find(".dd-menu").hide();
-                alert("hello");
-            });*/
-
-            /*$(".dropdown-inside").children("a.dropdown-parent").click(function () {
-                var ddinsideRef = $(this).parent(".dropdown-inside").parent(".dropdown-list");
-                var dropdownCurrentli = $(this).parent(".dropdown-inside");
-                var mainDropdown = $(this).parent(".dropdown-inside").parent(".dropdown-list").parent(".dropdown-menu-level").parent(".cbl-dropdown");
-                $(dropdownCurrentli).children(".dropdown-menu-sublevel").addClass("cbl-open");
-                var newHeight = $(dropdownCurrentli).children(".dropdown-menu-sublevel").height();
-                $(mainDropdown).height(newHeight);
-            });*/
-
-            $("[data-link]").click(function () {
-                var dropdown = $(this).closest('.content-menu');
-                var ref = $(this).data("link");
-                //$(dropdown).find("[data-ref=" + ref + "]").show();
-                //$(this).closest(".dropdown-menu-wrapper").hide();
-                if ($(this).data("action") === "back") {
-                    $(dropdown).find("[data-ref=" + ref + "]").addClass("current").removeClass("hide-lt hide-rt");
-                    $(this).closest(".dropdown-menu-wrapper").addClass("hide-rt").removeClass("current");
-                } else {
-                    $(dropdown).find("[data-ref=" + ref + "]").addClass("current").removeClass("hide-lt hide-rt");
-                    $(this).closest(".dropdown-menu-wrapper").addClass("hide-lt").removeClass("current");
-                }
-            })
-
-            $(".button-sidebar-toggle, .cbl-logo-button-toggle").click(function () {
-
-                if ($("body").hasClass("sidebar-open")) {
-                    $(this).children("i").removeClass("la-times").addClass("la-bars");
-                } else {
-                    $(this).children("i").removeClass("la-bars").addClass("la-times");
-                }
-                $("body").toggleClass("sidebar-open").removeClass("usermenu-open");
-                //$(this).children("i").toggleClass("la-bars la-times");
-                e.stopPropagation()
-            })
-
-            $(window).bind("resize", function () {
-                console.log($(this).width())
-                if ($(this).width() < 800) {
-                    $('body').removeClass('sidebar-open');
-                    $('.button-sidebar-toggle i').removeClass('la-times').addClass('la-bars');
-                }
-            }).trigger('resize');
-
-            $(".button-usermenu-toggle").click(function () {
-                $("body").toggleClass("usermenu-open").removeClass("sidebar-open");
-                $(this).children("i").toggleClass("la-user-circle la-times");
-                e.stopPropagation()
-            })
-
-            $(".cbl-exchange-button").click(function () {
-                $('#modalExchange').modal('show');
-            })
-
-        </script>
-
-        <script>
-            $(function () {
-                var source = [
-                    //Modulo ventas
-                    { label: 'Buscar facturas', value: '/comprobantes.aspx' },
-                    { label: 'Buscar facturas pendientes', value: '/modulos/ventas/facturasElectronicasPendientes.aspx' },
-                    { label: 'Buscar cobranzas', value: '/cobranzas.aspx' },
-                    { label: 'Buscar presupuestos', value: '/presupuestos.aspx' },
-                    { label: 'Buscar productos y servicios', value: '/conceptos.aspx' },
-                    { label: 'Buscar rubros', value: '/rubros.aspx' },
-                    { label: 'Buscar clientes', value: '/personas.aspx?tipo=c' },
-                    { label: 'Buscar abonos', value: '/abonos.aspx' },
-                    { label: 'Nueva factura', value: '/comprobantese.aspx' },
-                    { label: 'Nueva cobranza', value: '/cobranzase.aspx' },
-                    { label: 'Nuevo presupuesto', value: '/presupuestose.aspx' },
-                    { label: 'Nuevo producto o servicio', value: '/conceptose.aspx' },
-                    { label: 'Nuevo cliente', value: '/personase.aspx?tipo=c' },
-                    { label: 'Nuevo abonos', value: '/abonose.aspx' },
-                    { label: 'Facturar abonos', value: '/generarAbonos.aspx' },
-                    { label: 'Aplicar cobranzas a cuenta', value: '/aplicarCobranzasACuenta.aspx' },
-                    { label: 'Aumento de precios', value: '/modulos/ventas/aumentoMasivoPrecios.aspx' },
-                    { label: 'Condiciones de venta', value: '/modulos/ventas/condicionesVentas.aspx' },
-                    //Modulo Compras
-                    { label: 'Buscar ordenes de compras', value: '/ordenesCompras.aspx' },
-                    { label: 'Buscar compras', value: '/compras.aspx' },
-                    { label: 'Buscar pagos', value: '/pagos.aspx' },
-                    { label: 'Buscar proveedores', value: '/personas.aspx?tipo=p' },
-                    { label: 'Nueva compra', value: '/comprase.aspx' },
-                    { label: 'Nuevo pago', value: '/pagose.aspx' },
-                    { label: 'Nuevo proveedor', value: '/personase.aspx?tipo=p' },
-                    { label: 'Aplicar pagos a cuenta', value: '/aplicarPagosACuenta.aspx' },
-                    //Modulo tesoreria
-                    { label: 'Buscar bancos', value: '/modulos/tesoreria/bancos.aspx' },
-                    //{ label: 'Buscar gastos bancarios', value: '/modulos/tesoreria/gastosBancarios.aspx' },
-                    { label: 'Buscar cheques', value: '/modulos/tesoreria/cheques.aspx' },
-                    { label: 'Buscar Movimientos de fondos', value: '/modulos/tesoreria/MovimientoDeFondos' },
-                    { label: 'Buscar caja', value: '/modulos/tesoreria/caja.aspx' },
-                    { label: 'Nuevo banco', value: '/modulos/tesoreria/bancose.aspx' },
-                    { label: 'Nuevo gastos bancarios', value: '/modulos/tesoreria/bancosDetalle.aspx' },
-                    { label: 'Nuevo cheque', value: '/modulos/tesoreria/chequese.aspx' },
-                    { label: 'Detalle Bancario', value: '/modulos/reportes/DetalleBancario.aspx' },
-                    //Modulo inventarios
-                    { label: 'Buscar depósitos', value: '/modulos/inventarios/inventarios.aspx' },
-                    { label: 'Nuevo depósitos', value: '/modulos/inventarios/inventariose.aspx' },
-                    { label: 'Modificar stock', value: '/modulos/inventarios/modificacionStock.aspx' },
-                    { label: 'Movimientos de stock', value: '/modulos/inventarios/movimientosDeStock.aspx' },
-                    { label: 'Movimientos entre depósitos', value: '/modulos/inventarios/movimientosDeStock.aspx' },
-                    //Modulo contabilidad
-                    { label: 'Libro diario', value: '/modulos/contabilidad/LibroDiario.aspx' },
-                    { label: 'Libro diario copiativo', value: '/modulos/contabilidad/LibroDiarioCopiativo.aspx' },
-                    { label: 'Libro mayor', value: '/modulos/contabilidad/LibroMayor.aspx' },
-                    { label: 'Plan de cuentas', value: '/modulos/contabilidad/plandecuentas.aspx' },
-                    { label: 'Balance general', value: '/modulos/reportes/BalanceGeneral.aspx' },
-                    { label: 'Estado de resultado', value: '/modulos/reportes/EstadoResultado.aspx' },
-                    { label: 'Asientos manuales', value: '/modulos/contabilidad/asientosManuales.aspx' },
-                    //Reportes
-                    { label: 'Reporte Ventas vs Compras', value: '/modulos/reportes/ventas-vs-compras.aspx' },
-                    { label: 'Reporte Ventas vs Pagos', value: '/modulos/reportes/ventas-vs-pagos.aspx' },
-                    { label: 'Reporte Compras por categoría', value: '/modulos/reportes/compras-por-categoria.aspx' },
-                    { label: 'Reporte Compras por categorias mensuales', value: '/modulos/reportes/compras-por-categoria-mensual.aspx' },
-                    { label: 'Reporte Liquidez anual', value: '/modulos/reportes/utilidad.aspx' },
-                    { label: 'Reporte Cobrado vs Pagado', value: '/modulos/reportes/cobrado-vs-pagado.aspx' },
-                    { label: 'Reporte Ventas mensuales', value: '/modulos/reportes/ventasDelMes.aspx' },
-                    { label: 'Reporte IVA Compras', value: '/reportes/iva-compras.aspx' },
-                    { label: 'Reporte IVA Ventas', value: '/modulos/reportes/iva-ventas.aspx' },
-                    { label: 'Reporte IVA Saldo', value: '/reportes/iva-saldo.aspx' },
-                    { label: 'Reporte Retenciones', value: '/reportes/retenciones.aspx' },
-                    { label: 'Reporte Percepciones', value: '/modulos/reportes/percepciones.aspx' },
-                    { label: 'Reporte C.I.T.I: compras y ventas', value: 'modulos/reportes/citiVentas.aspx' },
-                    { label: 'Reporte Cuenta Corriente', value: '/modulos/reportes/cc.aspx' },
-                    { label: 'Reporte Cobranzas pendientes', value: '/reportes/cobranzasPendientes.aspx' },
-                    { label: 'Reporte Pagos a proveedores', value: '/modulos/reportes/pagoprov.aspx' },
-                    { label: 'Reporte Stock productos', value: '/modulos/reportes/stock.aspx' },
-                    { label: 'Reporte Cuentas a pagar', value: '/modulos/reportes/cuentasPagar.aspx' },
-                    { label: 'Reporte Ranking por cliente', value: '/modulos/reportes/rnk-clientes.aspx' },
-                    { label: 'Reporte Ranking por producto/servicio', value: '/modulos/reportes/rnk-conceptos.aspx' },
-                    { label: 'Reporte Tracking de horas', value: '/modulos/reportes/trackingHora.aspx' },
-                    { label: 'Reporte Productos/servicios por cliente', value: '/modulos/reportes/productosPorCliente.aspx' },
-                    { label: 'Reporte Compras por cliente', value: '/modulos/reportes/comprasPorCliente.aspx' },
-                    { label: 'Reporte Entradas y salidas de productos', value: '/modulos/reportes/historicoStock.aspx' },
-                    { label: 'Reporte Rentabilidad', value: '/modulos/reportes/rentabilidad-de-productos.aspx' },
-                    { label: 'Reporte Rentabilidad x Venta', value: '/modulos/reportes/rentabilidad-de-productos-det.aspx' },
-                    { label: 'Reporte Ventas por puntos de venta mensuales', value: '/modulos/reportes/ventas-por-pdv-mensual.aspx' },
-                    { label: 'Reporte Comisiones por vendedor', value: '/modulos/reportes/comisiones.aspx' },
-                    { label: 'Reporte Ventas por provincias', value: '/modulos/reportes/ventasPorProvincias.aspx' },
-                    { label: 'Reporte Compras por provincias', value: '/modulos/reportes/comprasPorProvincias.aspx' },
-                    { label: 'Reporte Ingresos y egresos por categorias', value: '/modulos/reportes/IngresosEgresosCategorias.aspx' },
-                    { label: 'Stock por Despacho de importacion', value: '/modulos/reportes/stockPorDespachoDeImportacion.aspx' },
-
-                    //Importaciones
-                    { label: 'Importar clientes', value: '/importar.aspx?tipo=Clientes' },
-                    { label: 'Importar proveedores', value: '/importar.aspx?tipo=Proveedores' },
-                    { label: 'Importar productos', value: '/importar.aspx?tipo=Productos' },
-                    { label: 'Importar servicios', value: '/importar.aspx?tipo=Servicios' },
-                    { label: 'Importar compras', value: '/importar.aspx?tipo=FacturasCompras' },
-                    { label: 'Importar ventas', value: '/importar.aspx?tipo=Facturas' },
-                    //Otros
-                    { label: 'Explorador de archivos', value: '/file-explorer.aspx' },
-                    { label: 'Alertas', value: '/alertas.aspx' },
-                    { label: 'Administrar usuarios', value: '/modulos/seguridad/usuarios.aspx' }
-                ];
-                $("#search").autocomplete({
-                    source: source,
-                    select: function (event, ui) {
-                        window.location.href = ui.item.value;
-                    }
-                });
-            });
-
-            function setBadgeCount() {
-                $('.cbl-icon-badge[data-count]').each(function (i, item) {
-
-                    /*var badge = $(this);
-                    var count = $(badge).data("count");*/
-
-                    var badge = $(item);
-                    var count = $(badge).data("count");
-
-                    if (count) {
-                        if (count <= 0) {
-                            $(badge).css({ 'display': 'none' });
-                        } else {
-                            if (count >= 100) {
-                                $(badge).append("+99");
-                            } else {
-                                $(badge).append(count);
-                            }
-                        }
-                    }
-
-                });
-            }
-
-
-
-            $(document).ready(function () {
-                setBadgeCount();
-            });
-
-
-
-        </script>
+        <script src="js/main.js"></script>
 
 </html>
