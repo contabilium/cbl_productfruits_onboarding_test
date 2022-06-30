@@ -76,6 +76,8 @@ Se implementó un comportamiento para el contador de Notificaciones. Ahora la ca
 
 mediante Javascript se "imprime" en pantalla el número dependiendo del valor ingresado: si data-count es igual o menor a cero, no se mostrará; si data-count es igual o mayor a 100 se mostrará de la siguiente forma: "+99".
 
+¡¡¡Importante!!! Tener en cuenta que el div "cbl-icon-badge" está 2 veces en el código, una para vista desktop y otra para vista mobile. Si se setea el data-count hay que hacerlo en ambos divs.
+
 
 ### Menu lateral
 
