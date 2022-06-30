@@ -54,7 +54,7 @@ Actualmente se puede encontrar en el código de la siguiente manera:
 <div class="cbl-top-banner">¡Validación de correo pendiente! Su cuenta se deshabilitará en las próximas 24 horas. <a href="">Actívela desde aquí</a></div>
 ```
 
-¡¡¡Importante!!! Para ocultarla agregar la clase "hidden" al lado de cbl-top-banner. Además hay que quitar la clase "cbl-top-banner-visible" del div "cbl-menu-nav".
+¡¡¡Importante!!! Para ocultarla agregar la clase "hidden" al lado de cbl-top-banner. Además hay que quitar la clase "cbl-top-banner-visible" del body.
 
 ### Sugerencias del buscador
 
