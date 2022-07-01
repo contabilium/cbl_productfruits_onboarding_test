@@ -185,3 +185,26 @@ function setBadgeCount() {
 $(document).ready(function () {
     setBadgeCount();
 });
+
+
+// tab focus fix
+var allowTabFocus = true;
+
+$(window).on('keydown', function(e) {
+    console.log(e);
+  $('*').removeClass('tab-focus');
+  if(e.keyCode === 9) {
+    allowTabFocus = true;
+  }
+});
+
+$('*').on('focus', function() {
+    if(allowTabFocus) {
+    $(this).addClass('tab-focus');
+  }
+});
+
+$(window).on('mousedown', function() {
+    $('*').removeClass('tab-focus');
+  allowTabFocus = false;
+})
