@@ -1269,3 +1269,13 @@ body.sidebar-open .cbl-top-nav-wrapper {
         overflow: hidden;
     }
 }
+
+#onboarding {
+    width: 33.33%; 
+    height: auto; 
+    background: #fff; 
+    margin: 30px;
+    font-family: "Work Sans";
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,.1);
+}

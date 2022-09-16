@@ -16,14 +16,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <title>Contabilium Menu</title>
+    <title>Product Fruits Test</title>
+
+
+    <!-- [Product Fruits] -->
+    <!-- 1. Insert this part to HEAD -->
+    <script type="text/javascript">
+        (function (w, d, u) {
+            w.$productFruits = w.$productFruits || [];
+            w.productFruits = w.productFruits || {}; w.productFruits.scrV = '2';
+            let a = d.getElementsByTagName('head')[0]; let r = d.createElement('script'); r.async = 1; r.src = u; a.appendChild(r);
+        })(window, document, 'https://app.productfruits.com/static/script.js');
+    </script>
+
 
 </head>
 
 <body class="cbl-top-banner-visible">
     <!-- top nav -->
     <header class="cbl-top-nav">
-        <div class="cbl-top-banner">¡Validación de correo pendiente! Su cuenta se deshabilitará en las próximas 24 horas. <a href="">Actívela desde aquí</a></div>
+        <div class="cbl-top-banner">¡Validación de correo pendiente! Su cuenta se deshabilitará en las próximas 24
+            horas. <a href="">Actívela desde aquí</a></div>
         <div class="cbl-top-nav-wrapper">
             <a href="#" class="cbl-logo">
                 <img src="img/logo.svg" alt="Contabilium" width="100%" />
@@ -316,7 +329,8 @@
                                     <i class="la la-book-open"></i> <span class="cbl-menu-label">Contabilidad</span>
                                 </div>
                             </a>
-                            <div class="cbl-sidebar-dropdown dropdown-menu" style="top: inherit; bottom: 100%; margin-bottom: -194px;">
+                            <div class="cbl-sidebar-dropdown dropdown-menu"
+                                style="top: inherit; bottom: 100%; margin-bottom: -194px;">
                                 <h6>Contabilidad</h6>
                                 <ul>
                                     <li><a href="/modulos/contabilidad/plandecuentas.aspx"
@@ -505,8 +519,8 @@
                 <div class="cbl-sidebar-bottom-content">
                     <ul class="cbl-sidebar-list cbl-secondary-list">
                         <li>
-                            <a href="#modalExchange" role="button" class="cbl-exchange-button" data-toggle="tooltip" data-placement="right"
-                                title="Tipo de cambio">
+                            <a href="#modalExchange" role="button" class="cbl-exchange-button" data-toggle="tooltip"
+                                data-placement="right" title="Tipo de cambio">
                                 <div class="cbl-icon-wrapper">
                                     <i class="la la-exchange"></i> <span class="cbl-menu-label">Tipo de cambio</span>
                                 </div>
@@ -922,7 +936,8 @@
     <!-- content wrapper -->
     <div class="cbl-content-wrapper">
 
-        <img src="img/dashboard_capture.png" width="100%">
+        <div id="onboarding" class="pf-onboarding">
+        </div>
 
 
     </div>
@@ -960,11 +975,43 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/select2.min.js"></script>
-        <script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- [Product Fruits] -->
+<!-- 2. Insert this part anywhere where you have the user information available -->
+<script type="text/javascript">
+
+
+    $productFruits.push(['init', 'SQIee9PzHXb6EG3R', 'en', { username: 'user001' }]);
+
+    window.addEventListener('productfruits_ready', function () {
+        console.log('Product Fruits is ready!');
+        const checklistId = 687;
+        const checkitem = 'item1';
+        const yourElement = document.getElementById("onboarding");
+        window.productFruits.api.checklists.injectToElement(checklistId, yourElement);
+
+        window.productFruits.api.checklists.markItemAsDone('item1', true);
+
+
+        window.productFruits.api.checklists.listen('dismissed', (checklistId) => {
+            alert('The checklist was dismissed by the user.')
+        });
+
+    });
+
+
+
+
+
+
+</script>
+
+
 
 </html>
